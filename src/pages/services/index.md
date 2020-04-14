@@ -1,7 +1,11 @@
 ---
 templateKey: 'service-page'
 path: /services
-title: Our Coffee
+title: Services
+image: /img/service-page-background.jpeg
+heading: Services
 ---
 
-### This is the services page
+### This is just content example text
+
+ABC DEF GHI
