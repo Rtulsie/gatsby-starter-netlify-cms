@@ -15,6 +15,7 @@ export const ServicePageTemplate = ({
                 backgroundImage: `url(${
                 !!image.childImageSharp ? image.childImageSharp.fluid.src : image
                 })`,
+                backgroundPosition: `top left`,
             }}
             >
                 <h2
