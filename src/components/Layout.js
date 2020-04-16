@@ -3,8 +3,10 @@ import { Helmet } from 'react-helmet'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import './all.sass'
+import "./layout.css"
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
@@ -49,7 +51,10 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
       <Navbar />
-      <div>{children}</div>
+      <div className="content-padding">
+        <h1>Polish Me Pretty Beauty Boutique</h1>
+        {children}
+      </div>
       <Footer />
     </div>
   )

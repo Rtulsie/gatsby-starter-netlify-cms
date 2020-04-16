@@ -6,7 +6,8 @@ import Layout from '../components/Layout'
 export const ServicePageTemplate = ({
     image,
     title,
-    heading,t
+    heading,
+    services,
 }) => (
     <div className="content">
         <div
@@ -36,8 +37,17 @@ ServicePageTemplate.propTypes = {
     image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     title: PropTypes.string,
     heading: PropTypes.string,
-    content: PropTypes.string,
-    contentComponent: PropTypes.func,
+    services: PropTypes.shape({
+        item1: PropTypes.string,
+        item2: PropTypes.string,
+        item3: PropTypes.string,
+        item4: PropTypes.string,
+        item5: PropTypes.string,
+        item6: PropTypes.string,
+        item7: PropTypes.string,
+        item8: PropTypes.string,
+        item9: PropTypes.string,
+    }),
 }
 
 const ServicePage = ({data}) => {
@@ -49,6 +59,7 @@ const ServicePage = ({data}) => {
                 image={frontmatter.image}
                 title={frontmatter.title}
                 heading={frontmatter.heading}
+                services={frontmatter.services}
             />
         </Layout>
     )
@@ -78,6 +89,17 @@ export const servicePageQuery = graphql`
                     }
                 }
                 heading
+                services {
+                    item1
+                    item2
+                    item3
+                    item4
+                    item5
+                    item6
+                    item7
+                    item8
+                    item9
+                }
             }
         }
     }
