@@ -17,3 +17,8 @@ html {
   .content-padding{
     padding-top: 4.5em;
   }
+
+  .fontStyle{
+    font-family: 'Dawning of a New Day';
+    padding-top: 0.25em;
+  }

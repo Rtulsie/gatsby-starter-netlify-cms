@@ -13,6 +13,8 @@ const TemplateWrapper = ({ children }) => {
   return (
     <div>
       <Helmet>
+        <link href='https://fonts.googleapis.com/css?family=Dawning of a New Day' rel='stylesheet'/>
+
         <html lang="en" />
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -52,7 +54,7 @@ const TemplateWrapper = ({ children }) => {
       </Helmet>
       <Navbar />
       <div className="content-padding">
-        <h1>Polish Me Pretty Beauty Boutique</h1>
+        <h1 className="fontStyle">Polish Me Pretty Beauty Boutique</h1>
         {children}
       </div>
       <Footer />

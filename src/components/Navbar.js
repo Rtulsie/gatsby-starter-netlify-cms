@@ -16,7 +16,7 @@ const Header = ({ siteTitle }) => (
         />{' '}
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
+      <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
         <Nav className="mr-auto">
           <Nav.Link href="/services">Services</Nav.Link>
           <Nav.Link href="/products">Products</Nav.Link>

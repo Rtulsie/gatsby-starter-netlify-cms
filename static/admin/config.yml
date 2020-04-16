@@ -54,7 +54,8 @@ collections:
         name: "Services"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "service-page"}
-          - {label: "Title", name: "title", widget: "string"}
+          - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
+          - {label: Caption, name: caption, widget: "string"}
           - {label: Heading, name: heading, widget: string}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: Services, name: services, widget: object, fields: [{label: Service No.1, name: item1, widget: string}, {label: Service No.2, name: item2, widget: string}, {label: Service No.3, name: item3, widget: string}, {label: Service No.4, name: item4, widget: string}, {label: Service No.5, name: item5, widget: string}, {label: Service No.6, name: item6, widget: string}, {label: Service No.7, name: item7, widget: string}, {label: Service No.8, name: item8, widget: string}, {label: Service No.9, name: item9, widget: string}]

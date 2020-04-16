@@ -3,6 +3,7 @@ templateKey: 'service-page'
 path: /services
 title: Services
 image: /img/service-page-background.jpeg
+caption: Quality Services for Dashing Results
 heading: Services We Proide
 services:
     item1: Manicures
