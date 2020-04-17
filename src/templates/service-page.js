@@ -76,9 +76,6 @@ export const ServicePageTemplate = ({
                     <Media>
                         <Container>
                             <Row>
-                                <Col xs={6} xs={4}>
-                                    <PreviewCompatibleImage imageInfo={main.image1} />
-                                </Col>
                                 <Media.Body>
                                     <h5>{main.type1}</h5>
                                     <p>
@@ -98,6 +95,9 @@ export const ServicePageTemplate = ({
                                         Male: {main.price2.male}
                                     </p>
                                 </Media.Body>
+                                <Col xs={6} xs={4}>
+                                    <PreviewCompatibleImage imageInfo={main.image1} />
+                                </Col>
                             </Row>
                         </Container>
                     </Media>
