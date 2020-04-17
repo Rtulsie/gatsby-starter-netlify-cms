@@ -4,7 +4,7 @@ import {graphql} from 'gatsby'
 import Layout from '../components/Layout'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
-import {ListGroup, Container, Col, Row, Image} from 'react-bootstrap'
+import {ListGroup, Container, Col, Row, Media} from 'react-bootstrap'
 
 export const ServicePageTemplate = ({
     image,
@@ -73,20 +73,34 @@ export const ServicePageTemplate = ({
 
                 <h1>{services.item1}</h1>
                 <div>
-                    <Container>
-                        <Row>
-                            <Col xs={6} md={4}>
-                                <PreviewCompatibleImage imageInfo={main.image1} />
-                            </Col>
-                        </Row>
-                    </Container>
-                    {main.type1}
-                    <br/>
-                    {main.text1}
-                    <br/>
-                    {main.price1.female}
-                    <br/>
-                    {main.price1.male}
+                    <Media>
+                        <Container>
+                            <Row>
+                                <Col xs={6} xs={4}>
+                                    <PreviewCompatibleImage imageInfo={main.image1} />
+                                </Col>
+                                <Media.Body>
+                                    <h5>{main.type1}</h5>
+                                    <p>
+                                        {main.text1}
+                                        <br/>
+                                        Female: {main.price1.female}
+                                        <br/>
+                                        Male: {main.price1.male}
+                                    </p>
+                                        <br/><br/><br/>
+                                    <h5>{main.type2}</h5>
+                                    <p>
+                                        {main.text2}
+                                        <br/>
+                                        Female: {main.price2.female}
+                                        <br/>
+                                        Male: {main.price2.male}
+                                    </p>
+                                </Media.Body>
+                            </Row>
+                        </Container>
+                    </Media>
                 </div>
         </div>
     </div>
@@ -112,6 +126,11 @@ ServicePageTemplate.propTypes = {
         image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
         text1: PropTypes.string,
         price1: PropTypes.shape({
+            female: PropTypes.string,
+            male: PropTypes.string,
+        }),
+        text2: PropTypes.string,
+        price2: PropTypes.shape({
             female: PropTypes.string,
             male: PropTypes.string,
         }),
@@ -172,7 +191,6 @@ export const servicePageQuery = graphql`
                     item9
                 }
                 main {
-                    type1
                     image1 {
                         alt
                         image {
@@ -183,8 +201,15 @@ export const servicePageQuery = graphql`
                             }
                         }
                     }
+                    type1
                     text1
                     price1 {
+                        female
+                        male
+                    }
+                    type2
+                    text2
+                    price2 {
                         female
                         male
                     }
