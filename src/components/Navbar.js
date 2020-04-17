@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
 
 const Header = ({ siteTitle }) => (
   <header>   
-    <Navbar className="navbarColor" expand="lg" fixed="top">
+    <Navbar className="themeColor" expand="lg" fixed="top">
       <Navbar.Brand href="/">
         <img 
         src={logo}

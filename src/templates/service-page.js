@@ -2,7 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {graphql} from 'gatsby'
 import Layout from '../components/Layout'
-import {ListGroup} from 'react-bootstrap'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+
+import {ListGroup, Container, Col, Row, Image} from 'react-bootstrap'
 
 export const ServicePageTemplate = ({
     image,
@@ -10,6 +12,7 @@ export const ServicePageTemplate = ({
     caption,
     heading,
     services,
+    main,
 }) => (
     <div className="content">
         <div
@@ -53,7 +56,7 @@ export const ServicePageTemplate = ({
                 </h4>
             </div>               
         </div>
-        <div>
+        <div className="container">
                 <h3>{heading}</h3>
 
                 <ListGroup horizontal>
@@ -67,6 +70,24 @@ export const ServicePageTemplate = ({
                     <ListGroup.Item>{services.item8}</ListGroup.Item>
                     <ListGroup.Item>{services.item9}</ListGroup.Item>
                 </ListGroup>
+
+                <h1>{services.item1}</h1>
+                <div>
+                    <Container>
+                        <Row>
+                            <Col xs={6} md={4}>
+                                <PreviewCompatibleImage imageInfo={main.image1} />
+                            </Col>
+                        </Row>
+                    </Container>
+                    {main.type1}
+                    <br/>
+                    {main.text1}
+                    <br/>
+                    {main.price1.female}
+                    <br/>
+                    {main.price1.male}
+                </div>
         </div>
     </div>
 )
@@ -86,6 +107,15 @@ ServicePageTemplate.propTypes = {
         item8: PropTypes.string,
         item9: PropTypes.string,
     }),
+    main: PropTypes.shape({
+        type1: PropTypes.string,
+        image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+        text1: PropTypes.string,
+        price1: PropTypes.shape({
+            female: PropTypes.string,
+            male: PropTypes.string,
+        }),
+    }),
 }
 
 const ServicePage = ({data}) => {
@@ -99,6 +129,7 @@ const ServicePage = ({data}) => {
                 caption={frontmatter.caption}
                 heading={frontmatter.heading}
                 services={frontmatter.services}
+                main={frontmatter.main}
             />
         </Layout>
     )
@@ -139,6 +170,24 @@ export const servicePageQuery = graphql`
                     item7
                     item8
                     item9
+                }
+                main {
+                    type1
+                    image1 {
+                        alt
+                        image {
+                            childImageSharp {
+                                fluid(maxWidth: 2048, quality: 100) {
+                                    ...GatsbyImageSharpFluid
+                                }
+                            }
+                        }
+                    }
+                    text1
+                    price1 {
+                        female
+                        male
+                    }
                 }
             }
         }

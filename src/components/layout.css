@@ -2,7 +2,6 @@ html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
-    background-color: pink;
   }
   body {
     margin: 0;
@@ -10,8 +9,10 @@ html {
     -moz-osx-font-smoothing: grayscale;
   }
   
-  .navbarColor{
+  .themeColor{
     background-color: pink;
+    color: black;
+    font: outline;
   }
 
   .content-padding{

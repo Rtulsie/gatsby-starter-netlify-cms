@@ -8,7 +8,7 @@ import instagram from '../img/social/instagram.svg'
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="footer has-background-black has-text-white-ter">
+      <footer className="themeColor">
         <div className="content has-text-centered">
           <img
             src={logo}
@@ -16,8 +16,8 @@ const Footer = class extends React.Component {
             style={{ width: '14em', height: '10em' }}
           />
         </div>
-        <div className="content has-text-centered has-background-black has-text-white-ter">
-          <div className="container has-background-black has-text-white-ter">
+        <div className="themeColor">
+          <div className="container themeColor">
             <div className="columns">
               <div className="column is-4">
                 <section className="menu">
