@@ -4,7 +4,7 @@ import {graphql} from 'gatsby'
 import Layout from '../components/Layout'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
-import {Container, Col, Row, Media} from 'react-bootstrap'
+import {Container, Col, Row} from 'react-bootstrap'
 
 export const ServicePageTemplate = ({
     image,
@@ -61,49 +61,60 @@ export const ServicePageTemplate = ({
                 <Container>
                     <h3>{heading}</h3>
                     <Row>
-                        <Col sm="auto"><a href="#firstService">{services.item1}</a></Col>
-                        <Col sm="auto"><a href="#secondService">{services.item2}</a></Col>
-                        <Col sm="auto">{services.item3}</Col>
-                        <Col sm="auto">{services.item4}</Col>
-                        <Col sm="auto">{services.item5}</Col>
-                        <Col sm="auto">{services.item6}</Col>
-                        <Col sm="auto">{services.item7}</Col>
-                        <Col sm="auto">{services.item8}</Col>
-                        <Col sm="auto">{services.item9}</Col>
+                        <Col xs="auto" md="auto"><a href="#firstService">{services.item1}</a></Col>
+                        <Col xs="auto" md="auto"><a href="#secondService">{services.item2}</a></Col>
+                        <Col xs="auto" md="auto">{services.item3}</Col>
+                        <Col xs="auto" md="auto">{services.item4}</Col>
+                        <Col xs="auto" md="auto">{services.item5}</Col>
+                        <Col xs="auto" md="auto">{services.item6}</Col>
+                        <Col xs="auto" md="auto">{services.item7}</Col>
+                        <Col xs="auto" md="auto">{services.item8}</Col>
+                        <Col xs="auto" md="auto">{services.item9}</Col>
                     </Row>
                 </Container>
-                    <Container>
-                        <h1 id='firstService'>{services.item1}</h1>
-                        <Row>
-                            <Col xs={3}>
-                                <PreviewCompatibleImage imageInfo={main.image1} />
-                            </Col>
-                            <Col>
+                <Container>
+                    <Row className="justify-content-center" style={{paddingTop: '50px'}}>
+                        <h1 id='firstService' class>{services.item1}</h1>
+                    </Row>
+                    <Row>
+                        <Col xs={12} md={3}>
+                            <PreviewCompatibleImage imageInfo={main.image1} />
+                        </Col>
+                        <Col xs={12} md={9}>
+                            <Row>
                                 <h5>{main.type1}</h5>
                                 <p>{main.text1}</p>
+                            </Row>
                             <Row>
-                                <Col xs="auto">
+                                <Col xs="auto" md="auto">
+                                <h5>Price:</h5>
+                                </Col>
+                                <Col xs="auto" md="auto">
                                     <p>Female: {main.price1.female}</p>
                                 </Col> 
-                                <Col xs="auto">
+                                <Col xs="auto" md="auto">
                                     <p>Male: {main.price1.female}</p>
                                 </Col> 
-                            </Row>                                    
-                            </Col>
-                        </Row>
-                    </Container>
-                    
-                    <Media>
-                        <Container>
-                            <h1 id='secondService'>{services.item2}</h1>
+                            </Row><br/>
                             <Row>
-                                <Col>
-                                </Col>
-                                <Media.Body>
-                                </Media.Body>
+                                <h5>{main.type2}</h5>
+                                <p>{main.text2}</p>
                             </Row>
-                        </Container>
-                    </Media>
+                            <Row>
+                                <Col xs="auto" md="auto">
+                                <h5>Price:</h5>
+                                </Col>
+                                <Col xs="auto" md="auto">
+                                    <p>Female: {main.price2.female}</p>
+                                </Col> 
+                                <Col xs="auto" md="auto">
+                                    <p>Male: {main.price2.female}</p>
+                                </Col> 
+                            </Row>                
+                        </Col>
+                    </Row>
+                </Container>
+                <h1 id='secondService'>{services.item2}</h1>
                 </div>
         </div>
 )
