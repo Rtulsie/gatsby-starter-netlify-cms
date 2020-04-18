@@ -15,7 +15,7 @@ services:
     item7: Hair Studio
     item8: Massage Services
     item9: Threading
-main:
+serviceone:
     image1:
         alt: Manicure picture
         image: /img/manicure.jpeg
@@ -31,4 +31,28 @@ main:
     price2:
         female: $150.00
         male: $200.00
+    extra:
+        name: Additional
+        add1: Paraffin
+        price1: $75.00
+        add2: Gel Polish
+        price2: $75.00
+        add3: Painted Frech Tips
+        price3: $25.00
+        add4: Painted Frech Ombre
+        price4: $30.00
+        add5: Glitter Polish or (Accent Nail)
+        price5: $10.00 per Nail
+        add6: Nail Art
+        price6: $20.00 per Nail
+        add7: Gems
+        price7: $10.00 per Nail
+        add8: Chrome
+        price8_1: $10.00 per Nail
+        price8_2: $50.00 entire Hands
+        add9: Foil
+        price9_1: $10.00 per Nail
+        price9_2: $50.00 entire Hands
+        add10: Gel Top Coat
+        price10: $35.00
 ---

@@ -12,7 +12,7 @@ export const ServicePageTemplate = ({
     caption,
     heading,
     services,
-    main,
+    serviceone,
 }) => (
     <div className="content">
         <div
@@ -61,15 +61,15 @@ export const ServicePageTemplate = ({
                 <Container>
                     <h3>{heading}</h3>
                     <Row>
-                        <Col xs="auto" md="auto"><a href="#firstService">{services.item1}</a></Col>
-                        <Col xs="auto" md="auto"><a href="#secondService">{services.item2}</a></Col>
-                        <Col xs="auto" md="auto">{services.item3}</Col>
-                        <Col xs="auto" md="auto">{services.item4}</Col>
-                        <Col xs="auto" md="auto">{services.item5}</Col>
-                        <Col xs="auto" md="auto">{services.item6}</Col>
-                        <Col xs="auto" md="auto">{services.item7}</Col>
-                        <Col xs="auto" md="auto">{services.item8}</Col>
-                        <Col xs="auto" md="auto">{services.item9}</Col>
+                        <Col xs={12} md="auto"><a href="#firstService">{services.item1}</a></Col>
+                        <Col xs={12} md="auto"><a href="#secondService">{services.item2}</a></Col>
+                        <Col xs={12} md="auto">{services.item3}</Col>
+                        <Col xs={12} md="auto">{services.item4}</Col>
+                        <Col xs={12} md="auto">{services.item5}</Col>
+                        <Col xs={12} md="auto">{services.item6}</Col>
+                        <Col xs={12} md="auto">{services.item7}</Col>
+                        <Col xs={12} md="auto">{services.item8}</Col>
+                        <Col xs={12} md="auto">{services.item9}</Col>
                     </Row>
                 </Container>
                 <Container>
@@ -78,41 +78,62 @@ export const ServicePageTemplate = ({
                     </Row>
                     <Row>
                         <Col xs={12} md={3}>
-                            <PreviewCompatibleImage imageInfo={main.image1} />
+                            <PreviewCompatibleImage imageInfo={serviceone.image1} />
                         </Col>
                         <Col xs={12} md={9}>
-                            <Row>
-                                <h5>{main.type1}</h5>
-                                <p>{main.text1}</p>
+                            <Row style={{paddingTop: '15px'}}>
+                                <h5>{serviceone.type1}</h5>
+                                <p>{serviceone.text1}</p>
                             </Row>
                             <Row>
-                                <Col xs="auto" md="auto">
+                                <Col xs={4} md="auto">
                                 <h5>Price:</h5>
                                 </Col>
-                                <Col xs="auto" md="auto">
-                                    <p>Female: {main.price1.female}</p>
+                                <Col xs={4} md="auto">
+                                    <p>Female: {serviceone.price1.female}</p>
                                 </Col> 
-                                <Col xs="auto" md="auto">
-                                    <p>Male: {main.price1.female}</p>
+                                <Col xs={4} md="auto">
+                                    <p>Male: {serviceone.price1.male}</p>
                                 </Col> 
                             </Row><br/>
                             <Row>
-                                <h5>{main.type2}</h5>
-                                <p>{main.text2}</p>
+                                <h5>{serviceone.type2}</h5>
+                                <p>{serviceone.text2}</p>
                             </Row>
                             <Row>
-                                <Col xs="auto" md="auto">
+                                <Col xs={4} md="auto">
                                 <h5>Price:</h5>
                                 </Col>
-                                <Col xs="auto" md="auto">
-                                    <p>Female: {main.price2.female}</p>
+                                <Col xs={4} md="auto">
+                                    <p>Female: {serviceone.price2.female}</p>
                                 </Col> 
-                                <Col xs="auto" md="auto">
-                                    <p>Male: {main.price2.female}</p>
+                                <Col xs={4} md="auto">
+                                    <p>Male: {serviceone.price2.male}</p>
                                 </Col> 
                             </Row>                
                         </Col>
                     </Row>
+                    <Row className="justify-content-center">
+                        <h4>{serviceone.extra.name}</h4>
+                    </Row>
+                    <Row>        
+                        <Col xs={6} md={2}>{serviceone.extra.add1}</Col><Col xs={6} md={2}>{serviceone.extra.price1}</Col>
+                        <Col xs={6} md={2}>{serviceone.extra.add2}</Col><Col xs={6} md={2}>{serviceone.extra.price2}</Col>
+                        <Col xs={6} md={2}>{serviceone.extra.add3}</Col><Col xs={6} md={2}>{serviceone.extra.price3}</Col>        
+                    </Row>
+                    <Row>        
+                        <Col xs={6} md={2}>{serviceone.extra.add4}</Col><Col xs={6} md={2}>{serviceone.extra.price4}</Col>
+                        <Col xs={6} md={2}>{serviceone.extra.add10}</Col><Col xs={6} md={2}>{serviceone.extra.price10}</Col>
+                        <Col xs={6} md={2}>{serviceone.extra.add6}</Col><Col xs={6} md={2}>{serviceone.extra.price6}</Col>        
+                    </Row>
+                    <Row>        
+                        <Col xs={6} md={2}>{serviceone.extra.add5}</Col ><Col xs={6} md={2}>{serviceone.extra.price5}</Col>
+                        <Col xs={6} md={2}>{serviceone.extra.add8}</Col><Col xs={6} md={2}>{serviceone.extra.price8_1}<br/>{serviceone.extra.price8_2}</Col>
+                        <Col xs={6} md={2}>{serviceone.extra.add9}</Col><Col xs={6} md={2}>{serviceone.extra.price9_1}<br/>{serviceone.extra.price9_2}</Col>        
+                    </Row>
+                    <Row>
+                        <Col xs={6} md={2}>{serviceone.extra.add7}</Col><Col xs={6} md={2}>{serviceone.extra.price7}</Col>
+                    </Row>        
                 </Container>
                 <h1 id='secondService'>{services.item2}</h1>
                 </div>
@@ -134,7 +155,7 @@ ServicePageTemplate.propTypes = {
         item8: PropTypes.string,
         item9: PropTypes.string,
     }),
-    main: PropTypes.shape({
+    serviceone: PropTypes.shape({
         type1: PropTypes.string,
         image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
         text1: PropTypes.string,
@@ -146,6 +167,31 @@ ServicePageTemplate.propTypes = {
         price2: PropTypes.shape({
             female: PropTypes.string,
             male: PropTypes.string,
+        }),
+        extra: PropTypes.shape({
+            name: PropTypes.string,
+            add1: PropTypes.string,
+            price1: PropTypes.string,
+            add2: PropTypes.string,
+            price2: PropTypes.string,
+            add3: PropTypes.string,
+            price3: PropTypes.string,
+            add4: PropTypes.string,
+            price4: PropTypes.string,
+            add5: PropTypes.string,
+            price5: PropTypes.string,
+            add6: PropTypes.string,
+            price6: PropTypes.string,
+            add7: PropTypes.string,
+            price7: PropTypes.string,
+            add8: PropTypes.string,
+            price8_1: PropTypes.string,
+            price8_2: PropTypes.string,
+            add9: PropTypes.string,
+            price9_1: PropTypes.string,
+            price9_2: PropTypes.string,
+            add10: PropTypes.string,
+            price10: PropTypes.string,
         }),
     }),
 }
@@ -161,7 +207,7 @@ const ServicePage = ({data}) => {
                 caption={frontmatter.caption}
                 heading={frontmatter.heading}
                 services={frontmatter.services}
-                main={frontmatter.main}
+                serviceone={frontmatter.serviceone}
             />
         </Layout>
     )
@@ -203,7 +249,7 @@ export const servicePageQuery = graphql`
                     item8
                     item9
                 }
-                main {
+                serviceone {
                     image1 {
                         alt
                         image {
@@ -225,6 +271,31 @@ export const servicePageQuery = graphql`
                     price2 {
                         female
                         male
+                    }
+                    extra {
+                        name
+                        add1
+                        price1
+                        add2
+                        price2
+                        add3
+                        price3
+                        add4
+                        price4
+                        add5
+                        price5
+                        add6
+                        price6
+                        add7
+                        price7
+                        add8
+                        price8_1
+                        price8_2
+                        add9
+                        price9_1
+                        price9_2
+                        add10
+                        price10
                     }
                 }
             }
