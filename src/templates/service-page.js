@@ -4,7 +4,7 @@ import {graphql} from 'gatsby'
 import Layout from '../components/Layout'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
-import {ListGroup, Container, Col, Row, Media} from 'react-bootstrap'
+import {Container, Col, Row, Media} from 'react-bootstrap'
 
 export const ServicePageTemplate = ({
     image,
@@ -22,6 +22,7 @@ export const ServicePageTemplate = ({
                 !!image.childImageSharp ? image.childImageSharp.fluid.src : image
                 })`,
                 backgroundPosition: `top left`,
+                backgroundAttachment: `fixed`,
             }}>
             <div 
                 style={{
@@ -56,54 +57,55 @@ export const ServicePageTemplate = ({
                 </h4>
             </div>               
         </div>
-        <div className="container">
-                <h3>{heading}</h3>
-
-                <ListGroup horizontal>
-                    <ListGroup.Item>{services.item1}</ListGroup.Item>
-                    <ListGroup.Item>{services.item2}</ListGroup.Item>
-                    <ListGroup.Item>{services.item3}</ListGroup.Item>
-                    <ListGroup.Item>{services.item4}</ListGroup.Item>
-                    <ListGroup.Item>{services.item5}</ListGroup.Item>
-                    <ListGroup.Item>{services.item6}</ListGroup.Item>
-                    <ListGroup.Item>{services.item7}</ListGroup.Item>
-                    <ListGroup.Item>{services.item8}</ListGroup.Item>
-                    <ListGroup.Item>{services.item9}</ListGroup.Item>
-                </ListGroup>
-
-                <h1>{services.item1}</h1>
-                <div>
+        <div>
+                <Container>
+                    <h3>{heading}</h3>
+                    <Row>
+                        <Col sm="auto"><a href="#firstService">{services.item1}</a></Col>
+                        <Col sm="auto"><a href="#secondService">{services.item2}</a></Col>
+                        <Col sm="auto">{services.item3}</Col>
+                        <Col sm="auto">{services.item4}</Col>
+                        <Col sm="auto">{services.item5}</Col>
+                        <Col sm="auto">{services.item6}</Col>
+                        <Col sm="auto">{services.item7}</Col>
+                        <Col sm="auto">{services.item8}</Col>
+                        <Col sm="auto">{services.item9}</Col>
+                    </Row>
+                </Container>
+                    <Container>
+                        <h1 id='firstService'>{services.item1}</h1>
+                        <Row>
+                            <Col xs={3}>
+                                <PreviewCompatibleImage imageInfo={main.image1} />
+                            </Col>
+                            <Col>
+                                <h5>{main.type1}</h5>
+                                <p>{main.text1}</p>
+                            <Row>
+                                <Col xs="auto">
+                                    <p>Female: {main.price1.female}</p>
+                                </Col> 
+                                <Col xs="auto">
+                                    <p>Male: {main.price1.female}</p>
+                                </Col> 
+                            </Row>                                    
+                            </Col>
+                        </Row>
+                    </Container>
+                    
                     <Media>
                         <Container>
+                            <h1 id='secondService'>{services.item2}</h1>
                             <Row>
-                                <Media.Body>
-                                    <h5>{main.type1}</h5>
-                                    <p>
-                                        {main.text1}
-                                        <br/>
-                                        Female: {main.price1.female}
-                                        <br/>
-                                        Male: {main.price1.male}
-                                    </p>
-                                        <br/><br/><br/>
-                                    <h5>{main.type2}</h5>
-                                    <p>
-                                        {main.text2}
-                                        <br/>
-                                        Female: {main.price2.female}
-                                        <br/>
-                                        Male: {main.price2.male}
-                                    </p>
-                                </Media.Body>
-                                <Col xs={6} xs={4}>
-                                    <PreviewCompatibleImage imageInfo={main.image1} />
+                                <Col>
                                 </Col>
+                                <Media.Body>
+                                </Media.Body>
                             </Row>
                         </Container>
                     </Media>
                 </div>
         </div>
-    </div>
 )
 ServicePageTemplate.propTypes = {
     image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
