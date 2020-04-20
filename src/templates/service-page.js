@@ -63,18 +63,18 @@ export const ServicePageTemplate = ({
                     <Row>
                         <Col xs={12} md="auto"><a href="#firstService">{services.item1}</a></Col>
                         <Col xs={12} md="auto"><a href="#secondService">{services.item2}</a></Col>
-                        <Col xs={12} md="auto">{services.item3}</Col>
-                        <Col xs={12} md="auto">{services.item4}</Col>
-                        <Col xs={12} md="auto">{services.item5}</Col>
-                        <Col xs={12} md="auto">{services.item6}</Col>
-                        <Col xs={12} md="auto">{services.item7}</Col>
-                        <Col xs={12} md="auto">{services.item8}</Col>
-                        <Col xs={12} md="auto">{services.item9}</Col>
+                        <Col xs={12} md="auto"><a href="#thirdService">{services.item3}</a></Col>
+                        <Col xs={12} md="auto"><a href="#fourthService">{services.item4}</a></Col>
+                        <Col xs={12} md="auto"><a href="#fifthService">{services.item5}</a></Col>
+                        <Col xs={12} md="auto"><a href="#sixthService">{services.item6}</a></Col>
+                        <Col xs={12} md="auto"><a href="#seventhService">{services.item7}</a></Col>
+                        <Col xs={12} md="auto"><a href="#eighthService">{services.item8}</a></Col>
+                        <Col xs={12} md="auto"><a href="#ninthService">{services.item9}</a></Col>
                     </Row>
                 </Container>
                 <Container>
-                    <Row className="justify-content-center" style={{paddingTop: '50px'}}>
-                        <h1 id='firstService' class>{services.item1}</h1>
+                    <Row id='firstService' className="justify-content-center content-padding">
+                        <h1 class>{services.item1}</h1>
                     </Row>
                     <Row>
                         <Col xs={12} md={3}>
@@ -135,8 +135,91 @@ export const ServicePageTemplate = ({
                         <Col xs={6} md={2}>{serviceone.extra.add7}</Col><Col xs={6} md={2}>{serviceone.extra.price7}</Col>
                     </Row>        
                 </Container>
-                <h1 id='secondService'>{services.item2}</h1>
-                </div>
+                <Container>
+                    <Row id='secondService' className="justify-content-center content-padding" >
+                        <h1>{services.item2}</h1>
+                    </Row>
+                    <Row>
+                        <Col xs={{span: 12, order: 1}} md={{span: 3, order: 12}}>
+                            <PreviewCompatibleImage imageInfo={serviceone.image1} />
+                        </Col>
+                        <Col xs={{span: 12, order: 12}} md={{span: 9, order: 1}}>
+                            <h5>{serviceone.type1}</h5>
+                            <p>{serviceone.text1}</p>
+                        </Col>
+                    </Row>
+                </Container>
+                <Container>
+                    <Row id='thirdService' className="justify-content-center content-padding" >
+                        <h1>{services.item3}</h1>
+                    </Row>
+                    <Row>
+                        <Col xs={12} md={3}>
+                            <PreviewCompatibleImage imageInfo={serviceone.image1} />
+                        </Col>
+                    </Row>
+                </Container>
+                <Container>
+                    <Row id='fourthService' className="justify-content-center content-padding" >
+                        <h1>{services.item4}</h1>
+                    </Row>
+                    <Row>
+                        <Col xs={12} md={3}>
+                            <PreviewCompatibleImage imageInfo={serviceone.image1} />
+                        </Col>
+                    </Row>
+                </Container>
+                <Container>
+                    <Row id='fifthService' className="justify-content-center content-padding" >
+                        <h1>{services.item5}</h1>
+                    </Row>
+                    <Row>
+                        <Col xs={12} md={3}>
+                            <PreviewCompatibleImage imageInfo={serviceone.image1} />
+                        </Col>
+                    </Row>
+                </Container>
+                <Container>
+                    <Row id='sixthService' className="justify-content-center content-padding" >
+                        <h1>{services.item6}</h1>
+                    </Row>
+                    <Row>
+                        <Col xs={12} md={3}>
+                            <PreviewCompatibleImage imageInfo={serviceone.image1} />
+                        </Col>
+                    </Row>
+                </Container>
+                <Container>
+                    <Row id='seventhService' className="justify-content-center content-padding" >
+                        <h1>{services.item7}</h1>
+                    </Row>
+                    <Row>
+                        <Col xs={12} md={3}>
+                            <PreviewCompatibleImage imageInfo={serviceone.image1} />
+                        </Col>
+                    </Row>
+                </Container>
+                <Container>
+                    <Row id='eighthService' className="justify-content-center content-padding" >
+                        <h1>{services.item8}</h1>
+                    </Row>
+                    <Row>
+                        <Col xs={12} md={3}>
+                            <PreviewCompatibleImage imageInfo={serviceone.image1} />
+                        </Col>
+                    </Row>
+                </Container>
+                <Container>
+                    <Row id='ninthService' className="justify-content-center content-padding" >
+                        <h1>{services.item9}</h1>
+                    </Row>
+                    <Row>
+                        <Col xs={12} md={3}>
+                            <PreviewCompatibleImage imageInfo={serviceone.image1} />
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
         </div>
 )
 ServicePageTemplate.propTypes = {

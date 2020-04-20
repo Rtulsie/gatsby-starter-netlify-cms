@@ -2,7 +2,6 @@ html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
-    background-color: pink;
   }
   body {
     margin: 0;
@@ -22,5 +21,7 @@ html {
 
   .fontStyle{
     font-family: 'Dawning of a New Day';
-    padding-top: 0.25em;
+    padding: 0.25em 0 0 0.25em;
   }
+
+

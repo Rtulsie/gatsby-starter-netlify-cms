@@ -5,17 +5,31 @@ import logo from '../img/logo.svg'
 import facebook from '../img/social/facebook.svg'
 import instagram from '../img/social/instagram.svg'
 
+import {Container, Row, Col, Nav} from 'react-bootstrap'
+
 const Footer = class extends React.Component {
   render() {
     return (
       <footer className="themeColor">
-        <div className="content has-text-centered">
-          <img
-            src={logo}
-            alt="Polish Me Pretty BB"
-            style={{ width: '14em', height: '10em' }}
-          />
-        </div>
+        <Container>
+          <Row className="justify-content-center content-padding">
+            <img
+                src={logo}
+                alt="Polish Me Pretty BB"
+                style={{ width: '14em', height: '10em'}}
+              />     
+          </Row>
+          <Row>
+            <Col>
+              <Nav as="ul">
+                <Nav.Item as="li">
+                  <Link to="/" className="navbar-item" activeClassName="Active">Home</Link>
+                  <Nav.Link href="/">Home</Nav.Link>
+                </Nav.Item>
+              </Nav>
+            </Col>
+          </Row>
+        </Container>
         <div className="themeColor">
           <div className="container themeColor">
             <div className="columns">
