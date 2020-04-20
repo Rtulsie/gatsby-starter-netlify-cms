@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+//import { Link } from 'gatsby'
 
 import logo from '../img/logo.svg'
 import facebook from '../img/social/facebook.svg'
@@ -10,8 +10,8 @@ import {Container, Row, Col, Nav} from 'react-bootstrap'
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="themeColor">
-        <Container>
+      <footer className="content-padding">
+        <Container fluid className="themeColor">
           <Row className="justify-content-center content-padding">
             <img
                 src={logo}
@@ -19,76 +19,63 @@ const Footer = class extends React.Component {
                 style={{ width: '14em', height: '10em'}}
               />     
           </Row>
-          <Row>
-            <Col>
-              <Nav as="ul">
+          <Row className="content-padding">
+            <Col xs={12} md={4}>
+              <Row>
+                <h3>
+                  OUR OFFICE
+                </h3>
+              </Row>
+              <Row>
+                <p>Address and contact information goes here</p>
+              </Row>
+            </Col>
+            <Col xs={12} md={4}>
+              <Nav as="ul" className="flex-column">
                 <Nav.Item as="li">
-                  <Link to="/" className="navbar-item" activeClassName="Active">Home</Link>
+                  <h3>QUICK LINKS</h3>
+                </Nav.Item>
+                <Nav.Item as="li">
                   <Nav.Link href="/">Home</Nav.Link>
+                </Nav.Item>
+                <Nav.Item as="li">
+                  <Nav.Link href="/services">Services</Nav.Link>
+                </Nav.Item>
+                <Nav.Item as="li">
+                  <Nav.Link href="/products">Products</Nav.Link>
+                </Nav.Item>
+                <Nav.Item as="li">
+                  <Nav.Link href="/about">About</Nav.Link>
+                </Nav.Item>
+                <Nav.Item as="li">
+                  <Nav.Link href="/contact">Contact Us</Nav.Link>
                 </Nav.Item>
               </Nav>
             </Col>
+            <Col xs={12} md={4} className="social">
+              <Row>
+                <h3>FOLLOW US ON:</h3>
+              </Row>
+              <a title="facebook" href="https://www.facebook.com/POLISHMEPRETTY868/">
+                <img
+                  src={facebook}
+                  alt="Facebook"
+                  style={{ width: '1em', height: '1em' }}
+                />
+              </a>
+              <a title="instagram" href="https://instagram.com">
+                <img
+                  src={instagram}
+                  alt="Instagram"
+                  style={{ width: '1em', height: '1em' }}
+                />
+              </a>
+            </Col>
+          </Row>
+          <Row>
+            <p>Some gibberish here</p>
           </Row>
         </Container>
-        <div className="themeColor">
-          <div className="container themeColor">
-            <div className="columns">
-              <div className="column is-4">
-                <section className="menu">
-                  <ul className="menu-list">
-                    <li>
-                      <Link to="/" className="navbar-item">
-                        Home
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/services">
-                        Services
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/products">
-                        Products
-                      </Link>
-                    </li>
-                  </ul>
-                </section>
-              </div>
-              <div className="column is-4">
-                <section>
-                  <ul className="menu-list">
-                    <li>
-                      <Link className="navbar-item" to="/about">
-                        About
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/contact">
-                        Contact Us
-                      </Link>
-                    </li>
-                  </ul>
-                </section>
-              </div>
-              <div className="column is-4 social">
-                <a title="facebook" href="https://www.facebook.com/POLISHMEPRETTY868/">
-                  <img
-                    src={facebook}
-                    alt="Facebook"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-                <a title="instagram" href="https://instagram.com">
-                  <img
-                    src={instagram}
-                    alt="Instagram"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
       </footer>
     )
   }
