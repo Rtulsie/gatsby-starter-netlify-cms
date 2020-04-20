@@ -13,6 +13,14 @@ export const ServicePageTemplate = ({
     heading,
     services,
     serviceone,
+    servicetwo,
+    servicethree,
+    servicefour,
+    servicefive,
+    servicesix,
+    serviceseven,
+    serviceeight,
+    servicenine,
 }) => (
     <div className="content">
         <div
@@ -60,30 +68,32 @@ export const ServicePageTemplate = ({
         <div>
                 <Container>
                     <h3>{heading}</h3>
-                    <Row>
-                        <Col xs={12} md="auto"><a href="#firstService">{services.item1}</a></Col>
-                        <Col xs={12} md="auto"><a href="#secondService">{services.item2}</a></Col>
-                        <Col xs={12} md="auto"><a href="#thirdService">{services.item3}</a></Col>
-                        <Col xs={12} md="auto"><a href="#fourthService">{services.item4}</a></Col>
-                        <Col xs={12} md="auto"><a href="#fifthService">{services.item5}</a></Col>
-                        <Col xs={12} md="auto"><a href="#sixthService">{services.item6}</a></Col>
-                        <Col xs={12} md="auto"><a href="#seventhService">{services.item7}</a></Col>
-                        <Col xs={12} md="auto"><a href="#eighthService">{services.item8}</a></Col>
-                        <Col xs={12} md="auto"><a href="#ninthService">{services.item9}</a></Col>
+                    <Row className="justify-content-center">
+                        <Col xs={6} md="auto"><a href="#firstService">{services.item1}</a></Col>
+                        <Col xs={6} md="auto"><a href="#secondService">{services.item2}</a></Col>
+                        <Col xs={6} md="auto"><a href="#thirdService">{services.item3}</a></Col>
+                        <Col xs={6} md="auto"><a href="#fourthService">{services.item4}</a></Col>
+                        <Col xs={6} md="auto"><a href="#fifthService">{services.item5}</a></Col>
+                        <Col xs={6} md="auto"><a href="#sixthService">{services.item6}</a></Col>
+                        <Col xs={6} md="auto"><a href="#seventhService">{services.item7}</a></Col>
+                        <Col xs={6} md="auto"><a href="#eighthService">{services.item8}</a></Col>
+                        <Col xs={6} md="auto"><a href="#ninthService">{services.item9}</a></Col>
                     </Row>
                 </Container>
-                <Container>
-                    <Row id='firstService' className="justify-content-center content-padding">
+                <Container className="content-padding">
+                    <Row id='firstService' className="justify-content-center adjustment-padding">
                         <h1 class>{services.item1}</h1>
                     </Row>
                     <Row>
-                        <Col xs={12} md={3}>
+                        <Col xs={12} md={3}  className="my-auto">
                             <PreviewCompatibleImage imageInfo={serviceone.image1} />
                         </Col>
                         <Col xs={12} md={9}>
                             <Row style={{paddingTop: '15px'}}>
-                                <h5>{serviceone.type1}</h5>
-                                <p>{serviceone.text1}</p>
+                                <Col>
+                                    <h5>{serviceone.type1}</h5>
+                                    <p>{serviceone.text1}</p>
+                                </Col>
                             </Row>
                             <Row>
                                 <Col xs={4} md="auto">
@@ -97,8 +107,10 @@ export const ServicePageTemplate = ({
                                 </Col> 
                             </Row><br/>
                             <Row>
-                                <h5>{serviceone.type2}</h5>
-                                <p>{serviceone.text2}</p>
+                                <Col>
+                                    <h5>{serviceone.type2}</h5>
+                                    <p>{serviceone.text2}</p>
+                                </Col>
                             </Row>
                             <Row>
                                 <Col xs={4} md="auto">
@@ -135,99 +147,107 @@ export const ServicePageTemplate = ({
                         <Col xs={6} md={2}>{serviceone.extra.add7}</Col><Col xs={6} md={2}>{serviceone.extra.price7}</Col>
                     </Row>        
                 </Container>
-                <Container>
-                    <Row id='secondService' className="justify-content-center content-padding" >
-                        <h1>{services.item2}</h1>
-                    </Row>
-                    <Row>
-                        <Col xs={{span: 12, order: 1}} md={{span: 3, order: 12}}>
-                            <PreviewCompatibleImage imageInfo={serviceone.image1} />
-                        </Col>
-                        <Col xs={{span: 12, order: 12}} md={{span: 9, order: 1}}>
-                            <h5>{serviceone.type1}</h5>
-                            <p>{serviceone.text1}</p>
-                        </Col>
-                    </Row>
+                <Container fluid className="themeColor content-padding">
+                    <Container>
+                        <Row id='secondService' className="justify-content-center adjustment-padding" >
+                            <h1>{services.item2}</h1>
+                        </Row>
+                        <Row>
+                            <Col xs={{span: 12, order: 1}} md={{span: 3, order: 12}} className="my-auto">
+                                <PreviewCompatibleImage imageInfo={servicetwo.image1} />
+                            </Col>
+                            <Col xs={{span: 12, order: 12}} md={{span: 9, order: 1}}>
+                                <h5>{serviceone.type1}</h5>
+                                <p>{serviceone.text1}</p>
+                            </Col>
+                        </Row>
+                    </Container>
                 </Container>
-                <Container>
-                    <Row id='thirdService' className="justify-content-center content-padding" >
+                <Container className="content-padding">
+                    <Row id='thirdService' className="justify-content-center adjustment-padding" >
                         <h1>{services.item3}</h1>
                     </Row>
                     <Row>
-                        <Col xs={12} md={3}>
-                            <PreviewCompatibleImage imageInfo={serviceone.image1} />
+                        <Col xs={12} md={3} className="my-auto">
+                            <PreviewCompatibleImage imageInfo={servicethree.image1} />
                         </Col>
                     </Row>
                 </Container>
-                <Container>
-                <Row id='fourthService' className="justify-content-center content-padding" >
-                        <h1>{services.item4}</h1>
-                    </Row>
-                    <Row>
-                        <Col xs={{span: 12, order: 1}} md={{span: 3, order: 12}}>
-                            <PreviewCompatibleImage imageInfo={serviceone.image1} />
-                        </Col>
-                        <Col xs={{span: 12, order: 12}} md={{span: 9, order: 1}}>
-                            <h5>{serviceone.type1}</h5>
-                            <p>{serviceone.text1}</p>
-                        </Col>
-                    </Row>
+                <Container fluid className="themeColor content-padding">
+                    <Container>
+                        <Row id='fourthService' className="justify-content-center adjustment-padding" >
+                            <h1>{services.item4}</h1>
+                        </Row>
+                        <Row>
+                            <Col xs={{span: 12, order: 1}} md={{span: 3, order: 12}} className="my-auto">
+                                <PreviewCompatibleImage imageInfo={servicefour.image1} />
+                            </Col>
+                            <Col xs={{span: 12, order: 12}} md={{span: 9, order: 1}}>
+                                <h5>{serviceone.type1}</h5>
+                                <p>{serviceone.text1}</p>
+                            </Col>
+                        </Row>
+                    </Container>
                 </Container>
-                <Container>
-                    <Row id='fifthService' className="justify-content-center content-padding" >
+                <Container className="content-padding">
+                    <Row id='fifthService' className="justify-content-center adjustment-padding" >
                         <h1>{services.item5}</h1>
                     </Row>
                     <Row>
-                        <Col xs={12} md={3}>
-                            <PreviewCompatibleImage imageInfo={serviceone.image1} />
+                        <Col xs={12} md={3} className="my-auto">
+                            <PreviewCompatibleImage imageInfo={servicefive.image1} />
                         </Col>
                     </Row>
+                </Container >
+                <Container fluid className="themeColor content-padding">
+                    <Container>
+                    <Row id='sixthService' className="justify-content-center adjustment-padding" >
+                            <h1>{services.item6}</h1>
+                        </Row>
+                        <Row>
+                            <Col xs={{span: 12, order: 1}} md={{span: 3, order: 12}}>
+                                <PreviewCompatibleImage imageInfo={servicesix.image1} />
+                            </Col>
+                            <Col xs={{span: 12, order: 12}} md={{span: 9, order: 1}}>
+                                <h5>{serviceone.type1}</h5>
+                                <p>{serviceone.text1}</p>
+                            </Col>
+                        </Row>
+                    </Container>
                 </Container>
-                <Container>
-                <Row id='sixthService' className="justify-content-center content-padding" >
-                        <h1>{services.item6}</h1>
-                    </Row>
-                    <Row>
-                        <Col xs={{span: 12, order: 1}} md={{span: 3, order: 12}}>
-                            <PreviewCompatibleImage imageInfo={serviceone.image1} />
-                        </Col>
-                        <Col xs={{span: 12, order: 12}} md={{span: 9, order: 1}}>
-                            <h5>{serviceone.type1}</h5>
-                            <p>{serviceone.text1}</p>
-                        </Col>
-                    </Row>
-                </Container>
-                <Container>
-                    <Row id='seventhService' className="justify-content-center content-padding" >
+                <Container className="content-padding">
+                    <Row id='seventhService' className="justify-content-center adjustment-padding" >
                         <h1>{services.item7}</h1>
                     </Row>
                     <Row>
-                        <Col xs={12} md={3}>
-                            <PreviewCompatibleImage imageInfo={serviceone.image1} />
+                        <Col xs={12} md={3} className="my-auto">
+                            <PreviewCompatibleImage imageInfo={serviceseven.image1} />
                         </Col>
                     </Row>
                 </Container>
-                <Container>
-                <Row id='eighthService' className="justify-content-center content-padding" >
-                        <h1>{services.item8}</h1>
-                    </Row>
-                    <Row>
-                        <Col xs={{span: 12, order: 1}} md={{span: 3, order: 12}}>
-                            <PreviewCompatibleImage imageInfo={serviceone.image1} />
-                        </Col>
-                        <Col xs={{span: 12, order: 12}} md={{span: 9, order: 1}}>
-                            <h5>{serviceone.type1}</h5>
-                            <p>{serviceone.text1}</p>
-                        </Col>
-                    </Row>
+                <Container fluid className="themeColor content-padding">
+                    <Container>
+                        <Row id='eighthService' className="justify-content-center adjustment-padding" >
+                            <h1>{services.item8}</h1>
+                        </Row>
+                        <Row>
+                            <Col xs={{span: 12, order: 1}} md={{span: 3, order: 12}} className="my-auto">
+                                <PreviewCompatibleImage imageInfo={serviceeight.image1} />
+                            </Col>
+                            <Col xs={{span: 12, order: 12}} md={{span: 9, order: 1}}>
+                                <h5>{serviceone.type1}</h5>
+                                <p>{serviceone.text1}</p>
+                            </Col>
+                        </Row>
+                    </Container>
                 </Container>
-                <Container>
-                    <Row id='ninthService' className="justify-content-center content-padding" >
+                <Container className="content-padding">
+                    <Row id='ninthService' className="justify-content-center adjustment-padding" >
                         <h1>{services.item9}</h1>
                     </Row>
                     <Row>
-                        <Col xs={12} md={3}>
-                            <PreviewCompatibleImage imageInfo={serviceone.image1} />
+                        <Col xs={12} md={3} className="my-auto">
+                            <PreviewCompatibleImage imageInfo={servicenine.image1} />
                         </Col>
                     </Row>
                 </Container>
@@ -289,6 +309,30 @@ ServicePageTemplate.propTypes = {
             price10: PropTypes.string,
         }),
     }),
+    servicetwo: PropTypes.shape({
+        image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    }),
+    servicethree: PropTypes.shape({
+        image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    }),
+    servicefour: PropTypes.shape({
+        image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    }),
+    servicefive: PropTypes.shape({
+        image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    }),
+    servicesix: PropTypes.shape({
+        image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    }),
+    serviceseven: PropTypes.shape({
+        image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    }),
+    serviceeight: PropTypes.shape({
+        image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    }),
+    servicenine: PropTypes.shape({
+        image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    }),
 }
 
 const ServicePage = ({data}) => {
@@ -303,6 +347,14 @@ const ServicePage = ({data}) => {
                 heading={frontmatter.heading}
                 services={frontmatter.services}
                 serviceone={frontmatter.serviceone}
+                servicetwo={frontmatter.servicetwo}
+                servicethree={frontmatter.servicethree}
+                servicefour={frontmatter.servicefour}
+                servicefive={frontmatter.servicefive}
+                servicesix={frontmatter.servicesix}
+                serviceseven={frontmatter.serviceseven}
+                serviceeight={frontmatter.serviceeight}
+                servicenine={frontmatter.servicenine}
             />
         </Layout>
     )
@@ -391,6 +443,102 @@ export const servicePageQuery = graphql`
                         price9_2
                         add10
                         price10
+                    }
+                }
+                servicetwo {
+                    image1 {
+                        alt
+                        image {
+                            childImageSharp {
+                                fluid(maxWidth: 2048, quality: 100) {
+                                    ...GatsbyImageSharpFluid
+                                }
+                            }
+                        }
+                    }
+                }
+                servicethree {
+                    image1 {
+                        alt
+                        image {
+                            childImageSharp {
+                                fluid(maxWidth: 2048, quality: 100) {
+                                    ...GatsbyImageSharpFluid
+                                }
+                            }
+                        }
+                    }
+                }
+                servicefour {
+                    image1 {
+                        alt
+                        image {
+                            childImageSharp {
+                                fluid(maxWidth: 2048, quality: 100) {
+                                    ...GatsbyImageSharpFluid
+                                }
+                            }
+                        }
+                    }
+                }
+                servicefive {
+                    image1 {
+                        alt
+                        image {
+                            childImageSharp {
+                                fluid(maxWidth: 2048, quality: 100) {
+                                    ...GatsbyImageSharpFluid
+                                }
+                            }
+                        }
+                    }
+                }
+                servicesix {
+                    image1 {
+                        alt
+                        image {
+                            childImageSharp {
+                                fluid(maxWidth: 2048, quality: 100) {
+                                    ...GatsbyImageSharpFluid
+                                }
+                            }
+                        }
+                    }
+                }
+                serviceseven {
+                    image1 {
+                        alt
+                        image {
+                            childImageSharp {
+                                fluid(maxWidth: 2048, quality: 100) {
+                                    ...GatsbyImageSharpFluid
+                                }
+                            }
+                        }
+                    }
+                }
+                serviceeight {
+                    image1 {
+                        alt
+                        image {
+                            childImageSharp {
+                                fluid(maxWidth: 2048, quality: 100) {
+                                    ...GatsbyImageSharpFluid
+                                }
+                            }
+                        }
+                    }
+                }
+                servicenine {
+                    image1 {
+                        alt
+                        image {
+                            childImageSharp {
+                                fluid(maxWidth: 2048, quality: 100) {
+                                    ...GatsbyImageSharpFluid
+                                }
+                            }
+                        }
                     }
                 }
             }

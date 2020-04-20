@@ -37,7 +37,7 @@ const Header = ({ siteTitle }) => (
             </span>
           </Nav.Link>
           <Nav.Link
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/polishmepretty_tt/"
                     target="_blank"
                     rel="noopener noreferrer">
             <span className="icon">

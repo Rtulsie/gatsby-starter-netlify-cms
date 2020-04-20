@@ -53,7 +53,7 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
       <Navbar />
-      <div className="content-padding">
+      <div>
         <h1 className="fontStyle">Polish Me Pretty Beauty Boutique</h1>
         {children}
       </div>

@@ -3,7 +3,7 @@ templateKey: 'service-page'
 path: /services
 title: Services
 image: /img/service-page-background.jpeg
-caption: Quality Services for Dashing Results
+caption: THE ONE STOP BEAUTY HEAVEN FOR ALL YOUR GLAMOUR SERVICES
 heading: Services We Provide
 services:
     item1: Manicures
@@ -55,4 +55,36 @@ serviceone:
         price9_2: $50.00 entire Hands
         add10: Gel Top Coat
         price10: $35.00
+servicetwo:
+    image1:
+        alt: Pedicure picture
+        image: /img/pedicure.jpeg
+servicethree:
+    image1:
+        alt: Nail Bar picture
+        image: /img/manicure.jpeg
+servicefour:
+    image1:
+        alt: Waxing picture
+        image: /img/pedicure.jpeg
+servicefive:
+    image1:
+        alt: Make Up Services picture
+        image: /img/manicure.jpeg
+servicesix:
+    image1:
+        alt: Jelly Spa Bath picture
+        image: /img/pedicure.jpeg
+serviceseven:
+    image1:
+        alt: Hair Studio picture
+        image: /img/manicure.jpeg
+serviceeight:
+    image1:
+        alt: Make Up Services picture
+        image: /img/pedicure.jpeg
+servicenine:
+    image1:
+        alt: Threading picture
+        image: /img/manicure.jpeg
 ---

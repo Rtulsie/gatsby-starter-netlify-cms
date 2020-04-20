@@ -9,21 +9,26 @@ import {Container, Row, Col, Nav} from 'react-bootstrap'
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="content-padding">
+      <footer>
         <Container fluid className="themeColor">
           <Container>
-            <Row className="content-padding">
+            <Row className="adjustment-padding">
               <Col xs={12} md={4}>
                 <Row>
-                  <h3>
-                    OUR OFFICE
-                  </h3>
+                  <Col>
+                    <h3>OUR OFFICE</h3>
+                  </Col>
                 </Row>
                 <Row>
-                  <p>Address:<br/>
-                  98e Endeavour Road, Chaguanas, <br/>Trinidad and Tobago.</p>
-                  <p>Phone: (868) 303-6051</p>
-                  <p>Email: polishmeprettybb@gmail.com</p>
+                  <Col>
+                      <p>
+                            Address:
+                        <br/>98e Endeavour Road, Chaguanas,
+                        <br/>Trinidad and Tobago.
+                        <br/>Phone: (868) 303-6051
+                        <br/>Email: polishmeprettybb@gmail.com
+                      </p>
+                  </Col>
                 </Row>
               </Col>
               <Col xs={12} md={4}>
@@ -52,28 +57,26 @@ const Footer = class extends React.Component {
                 <Row>
                   <h3>FOLLOW US ON:</h3>
                 </Row>
-                <Row className="social">
-                  <Col>
-                    <a title="facebook" href="https://www.facebook.com/POLISHMEPRETTY868/">
-                      <img
-                          src={facebook}
-                        alt="Facebook"
-                        style={{ width: '1em', height: '1em' }}
-                      />
-                    </a>
-                    <a title="instagram" href="https://instagram.com">
-                      <img
-                        src={instagram}
-                        alt="Instagram"
-                        style={{ width: '1em', height: '1em' }}
-                      />
-                    </a>
-                  </Col>
-                </Row>
+                <Col className="social">
+                  <a title="facebook" href="https://www.facebook.com/POLISHMEPRETTY868/">
+                    <img
+                      src={facebook}
+                      alt="Facebook"
+                      style={{ width: '1em', height: '1em' }}
+                    />
+                  </a>
+                  <a title="instagram" href="https://www.instagram.com/polishmepretty_tt/">
+                    <img
+                      src={instagram}
+                      alt="Instagram"
+                      style={{ width: '1em', height: '1em' }}
+                    />
+                  </a>
+                </Col>
               </Col>
             </Row>
-            <Row className="content-padding">
-              <p>© 2019 by Polish Me Pretty Beauty Boutique.</p>
+            <Row className="adjustment-padding">
+              <p>©2019 by Polish Me Pretty Beauty Boutique.</p>
             </Row>
           </Container>
         </Container>
