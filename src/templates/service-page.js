@@ -54,7 +54,7 @@ export const ServicePageTemplate = ({
                     {title}
                 </h1>
                 <h4
-                    className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
+                    className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen text-center"
                     style={{
                         color: 'white',
                         lineHeight: '1',
@@ -77,7 +77,7 @@ export const ServicePageTemplate = ({
                         <Col xs={6} md="auto"><a href="#sixthService">{services.item6}</a></Col>
                         <Col xs={6} md="auto"><a href="#seventhService">{services.item7}</a></Col>
                         <Col xs={6} md="auto"><a href="#eighthService">{services.item8}</a></Col>
-                        <Col xs={6} md="auto"><a href="#ninthService">{services.item9}</a></Col>
+                        <Col xs={12} md="auto"><a href="#ninthService">{services.item9}</a></Col>
                     </Row>
                 </Container>
                 <Container className="content-padding">
