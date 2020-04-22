@@ -8,10 +8,10 @@ description: A bunch of munbo jumbo if needed
 intro:
   blurbs:
     - image: /img/item1.jpeg
-      heading: Heading 1
+      heading: Item 1 (Testing)
       text: |
-        Some text to describe
-      price: $x.xx
+        This text is changing to test stuff
+      price: 300,000.00
     - image: /img/item2.jpeg
       heading: Heading 2
       text: |
