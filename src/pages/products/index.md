@@ -9,23 +9,27 @@ intro:
   blurbs:
     - image: /img/item1.jpeg
       heading: Heading 1
-      text: >
+      text: |
         Some text to describe
       price: $x.xx
     - image: /img/item2.jpeg
       heading: Heading 2
-      text: >
+      text: |
         Some text to describe
       price: $x.xx
     - image: /img/item3.jpeg
       heading: Heading 3
-      text: >
+      text: |
         Some text to describe
       price: $x.xx
     - image: /img/item4.jpeg
       heading: Heading 4
-      text: >
+      text: |
         Some text to describe
       price: x.xx
+    - image: /img/products-full-width.jpg
+      heading: Iteam 5
+      text: It's a cup full of coffee
+      price: $300.00
 full_image: /img/product-page-background2.jpeg
 ---
