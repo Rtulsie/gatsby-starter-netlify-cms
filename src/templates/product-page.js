@@ -4,6 +4,8 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 
+import {Container, Row, Col} from 'react-bootstrap'
+
 export const ProductPageTemplate = ({
   image,
   title,
@@ -19,6 +21,8 @@ export const ProductPageTemplate = ({
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
+        backgroundPosition: `top left`,
+        backgroundAttachment: `fixed`,
       }}
     >
       <h2
@@ -33,56 +37,26 @@ export const ProductPageTemplate = ({
         {title}
       </h2>
     </div>
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="section">
-          <div className="columns">
-            <div className="column is-7 is-offset-1">
-              <h3 className="has-text-weight-semibold is-size-2">{heading}</h3>
-              <p>{description}</p>
-            </div>
-          </div>
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <Features gridItems={intro.blurbs} />
-              <div className="columns">
-                <div className="column is-7">
-                  <h3 className="has-text-weight-semibold is-size-3">
-                    
-                  </h3>
-                </div>
-              </div>
-              <div className="tile is-ancestor">
-                <div className="tile is-vertical">
-                  <div className="tile">
-                    <div className="tile is-parent is-vertical">
-                      <article className="tile is-child">
-                      </article>
-                    </div>
-                    <div className="tile is-parent">
-                      <article className="tile is-child">
-                      </article>
-                    </div>
-                  </div>
-                  <div className="tile is-parent">
-                    <article className="tile is-child">
-                    </article>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="full-width-image-container"
-                style={{
-                  backgroundImage: `url(${fullImage.childImageSharp?fullImage.childImageSharp.fluid.src:fullImage})`,
-                }}
-              />
-              <h2 className="has-text-weight-semibold is-size-2">
-              </h2>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <Container>
+      <Row>
+        <Col>
+          <h3>{heading}</h3>
+          <p>{description}</p>
+        </Col>
+      </Row>
+      <Row>
+        <Features gridItems={intro.blurbs} />
+      </Row>
+      <Row>
+        <div
+          className="full-width-image-container adjustment-padding"
+          style={{
+            backgroundImage: `url(${fullImage.childImageSharp?fullImage.childImageSharp.fluid.src:fullImage})`,
+            backgroundPosition: `top left`
+          }}
+        />
+      </Row>
+    </Container>
   </div>
 )
 

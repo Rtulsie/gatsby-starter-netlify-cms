@@ -31,5 +31,13 @@ intro:
       heading: Iteam 5
       text: It's a cup full of coffee
       price: $300.00
+    - image: /img/products-full-width.jpg
+      heading: Iteam 6
+      text: It's a cup full of coffee
+      price: $300.00
+    - image: /img/products-full-width.jpg
+      heading: Iteam 7
+      text: It's a cup full of coffee
+      price: $300.00
 full_image: /img/product-page-background2.jpeg
 ---

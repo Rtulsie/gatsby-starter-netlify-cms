@@ -8,8 +8,7 @@ const FeatureGrid = ({ gridItems }) => (
   <Container fluid>
     <Row >
       {gridItems.map(item => (
-        <Col key={item.text} xs={12} md={4} className="text-center">
-          <h5>{item.heading}</h5>
+        <Col key={item.text} xs={12} md={4} className="text-center content-padding">
           <div
             style={{
               width: '200px',
@@ -18,7 +17,9 @@ const FeatureGrid = ({ gridItems }) => (
           >
             <PreviewCompatibleImage imageInfo={item} />
           </div>
-          <p>{item.text}<br/>{item.price}</p>
+          <h4>{item.heading}</h4>
+          <p>{item.text}<br/>
+          ${item.price}</p>
         </Col>
       ))}
     </Row>

@@ -100,10 +100,10 @@ export const ServicePageTemplate = ({
                                 <h5>Price:</h5>
                                 </Col>
                                 <Col xs={4} md="auto">
-                                    <p>Female: {serviceone.price1.female}</p>
+                                    <p>Female: ${serviceone.price1.female}</p>
                                 </Col> 
                                 <Col xs={4} md="auto">
-                                    <p>Male: {serviceone.price1.male}</p>
+                                    <p>Male: ${serviceone.price1.male}</p>
                                 </Col> 
                             </Row><br/>
                             <Row>
@@ -117,10 +117,10 @@ export const ServicePageTemplate = ({
                                 <h5>Price:</h5>
                                 </Col>
                                 <Col xs={4} md="auto">
-                                    <p>Female: {serviceone.price2.female}</p>
+                                    <p>Female: ${serviceone.price2.female}</p>
                                 </Col> 
                                 <Col xs={4} md="auto">
-                                    <p>Male: {serviceone.price2.male}</p>
+                                    <p>Male: ${serviceone.price2.male}</p>
                                 </Col> 
                             </Row>                
                         </Col>
@@ -129,22 +129,22 @@ export const ServicePageTemplate = ({
                         <h4>{serviceone.extra.name}</h4>
                     </Row>
                     <Row>        
-                        <Col xs={6} md={2}>{serviceone.extra.add1}</Col><Col xs={6} md={2}>{serviceone.extra.price1}</Col>
-                        <Col xs={6} md={2}>{serviceone.extra.add2}</Col><Col xs={6} md={2}>{serviceone.extra.price2}</Col>
-                        <Col xs={6} md={2}>{serviceone.extra.add3}</Col><Col xs={6} md={2}>{serviceone.extra.price3}</Col>        
+                        <Col xs={6} md={2}>{serviceone.extra.add1}</Col><Col xs={6} md={2}>${serviceone.extra.price1}</Col>
+                        <Col xs={6} md={2}>{serviceone.extra.add2}</Col><Col xs={6} md={2}>${serviceone.extra.price2}</Col>
+                        <Col xs={6} md={2}>{serviceone.extra.add3}</Col><Col xs={6} md={2}>${serviceone.extra.price3}</Col>        
                     </Row>
                     <Row>        
-                        <Col xs={6} md={2}>{serviceone.extra.add4}</Col><Col xs={6} md={2}>{serviceone.extra.price4}</Col>
-                        <Col xs={6} md={2}>{serviceone.extra.add10}</Col><Col xs={6} md={2}>{serviceone.extra.price10}</Col>
-                        <Col xs={6} md={2}>{serviceone.extra.add6}</Col><Col xs={6} md={2}>{serviceone.extra.price6}</Col>        
+                        <Col xs={6} md={2}>{serviceone.extra.add4}</Col><Col xs={6} md={2}>${serviceone.extra.price4}</Col>
+                        <Col xs={6} md={2}>{serviceone.extra.add10}</Col><Col xs={6} md={2}>${serviceone.extra.price10}</Col>
+                        <Col xs={6} md={2}>{serviceone.extra.add6}</Col><Col xs={6} md={2}>${serviceone.extra.price6}</Col>        
                     </Row>
                     <Row>        
-                        <Col xs={6} md={2}>{serviceone.extra.add5}</Col ><Col xs={6} md={2}>{serviceone.extra.price5}</Col>
-                        <Col xs={6} md={2}>{serviceone.extra.add8}</Col><Col xs={6} md={2}>{serviceone.extra.price8_1}<br/>{serviceone.extra.price8_2}</Col>
-                        <Col xs={6} md={2}>{serviceone.extra.add9}</Col><Col xs={6} md={2}>{serviceone.extra.price9_1}<br/>{serviceone.extra.price9_2}</Col>        
+                        <Col xs={6} md={2}>{serviceone.extra.add5}</Col ><Col xs={6} md={2}>${serviceone.extra.price5}</Col>
+                        <Col xs={6} md={2}>{serviceone.extra.add8}</Col><Col xs={6} md={2}>${serviceone.extra.price8_1}<br/>${serviceone.extra.price8_2}</Col>
+                        <Col xs={6} md={2}>{serviceone.extra.add9}</Col><Col xs={6} md={2}>${serviceone.extra.price9_1}<br/>${serviceone.extra.price9_2}</Col>        
                     </Row>
                     <Row>
-                        <Col xs={6} md={2}>{serviceone.extra.add7}</Col><Col xs={6} md={2}>{serviceone.extra.price7}</Col>
+                        <Col xs={6} md={2}>{serviceone.extra.add7}</Col><Col xs={6} md={2}>${serviceone.extra.price7}</Col>
                     </Row>        
                 </Container>
                 <Container fluid className="themeColor content-padding">

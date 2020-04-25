@@ -2,6 +2,10 @@ import React from 'react'
 import { navigate } from 'gatsby-link'
 import Layout from '../../components/Layout'
 
+import {Container, Row, Col} from 'react-bootstrap'
+
+import mainImage from "../../img/contactPage1.jpeg"
+
 function encode(data) {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
@@ -21,7 +25,7 @@ export default class Index extends React.Component {
   handleSubmit = e => {
     e.preventDefault()
     const form = e.target
-    fetch('/', {
+    fetch('/?no-cache=1', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
@@ -33,20 +37,45 @@ export default class Index extends React.Component {
       .catch(error => alert(error))
   }
 
-  render() {
-    return (
+  render(contactPageQuery) {
+    return (  
       <Layout>
+        <Container className="themeColor">
+          <Row>
+            <Col md={3}>
+            </Col>
+            <Col md={5}>
+              <img src={mainImage} alt="Large Interior" />
+            </Col>
+            <Col md={4}>
+            </Col>
+          </Row>
+          <Row>
+            <Col md={3}>
+              <h5>ADDRESS</h5>
+              <br/>
+              <p>
+                98e Endeavour Road, Chaguanas,
+                <br/>
+                Trinidad and Tobago.
+              </p>
+            </Col>
+            <Col md={5}>
+             <h5>HOURS</h5>
+             <br/>
+              <p>Monday: Closed
+                <br/>Tuesday - Friday: 10:30am - 7:00pm
+                <br/>Saturday: 10:00am - 7:00pm
+                <br/>Sunday: 10:00am - 3:00pm
+              </p>
+            </Col>
+            <Col>
+            </Col>
+          </Row>
+        </Container>
         <section className="section">
           <div className="container">
-            <div className="content">
-              <h1>Contact Us</h1>
-              <table>
-                <thead>
-                  <tr>
-                    Monday: Closed
-                  </tr>
-                </thead>
-              </table>
+            <div className="content">              
               <form
                 name="contact"
                 method="post"
