@@ -25,7 +25,7 @@ export default class Index extends React.Component {
   handleSubmit = e => {
     e.preventDefault()
     const form = e.target
-    fetch('/?no-cache=1', {
+    fetch('https://stilltestingsite.netlify.app/contact/?no-cache=1', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
@@ -37,7 +37,7 @@ export default class Index extends React.Component {
       .catch(error => alert(error))
   }
 
-  render(contactPageQuery) {
+  render() {
     return (  
       <Layout>
         <Container className="themeColor">
