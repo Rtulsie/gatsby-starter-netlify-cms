@@ -6,11 +6,11 @@ import {Container, Row, Col} from 'react-bootstrap'
 
 import mainImage from "../../img/contactPage1.jpeg"
 
-function encode(data) {
+/*function encode(data) {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&')
-}
+}*/
 
 export default class Index extends React.Component {
   constructor(props) {
