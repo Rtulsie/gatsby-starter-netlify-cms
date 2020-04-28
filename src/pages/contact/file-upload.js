@@ -2,7 +2,7 @@ import React from 'react'
 import { navigate } from 'gatsby-link'
 import Layout from '../../components/Layout'
 
-/*function encode(data) {
+function encode(data) {
   const formData = new FormData()
 
   for (const key of Object.keys(data)) {
@@ -10,7 +10,7 @@ import Layout from '../../components/Layout'
   }
 
   return formData
-}*/
+}
 
 export default class Contact extends React.Component {
   constructor(props) {
