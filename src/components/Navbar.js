@@ -20,6 +20,7 @@ const Header = ({ siteTitle }) => (
         <Nav className="mr-auto">
           <Nav.Link href="/services">Services</Nav.Link>
           <Nav.Link href="/products">Products</Nav.Link>
+          <Nav.Link href="/gallery">Gallery</Nav.Link>
           <Nav.Link href="/about">About</Nav.Link>
           <Nav.Link href="/contact">Contact Us</Nav.Link>
         </Nav >

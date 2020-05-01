@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
-import {Container, Row, Col, Modal} from 'react-bootstrap'
+import {Container, Row, Col} from 'react-bootstrap'
 
-const FeatureGrid = ({ gridItems }) => (
+const GalleryFeatureGrid = ({ gridItems }) => (
   <Container fluid>
     <Row >
       {gridItems.map(item => (
@@ -15,24 +15,17 @@ const FeatureGrid = ({ gridItems }) => (
               //display: 'inline-block',
             }}
           >
-              <Modal.Dialog>
-                  <Modal.Header>
-                    <Modal.Title>{item.heading}</Modal.Title>
-                  </Modal.Header>
-                  <Modal.Body>
-                    <PreviewCompatibleImage imageInfo={item} />
-                    <p>{item.text}</p>
-                  </Modal.Body>
-              </Modal.Dialog>
+            <h1>{item.heading}</h1>
+            <PreviewCompatibleImage imageInfo={item} />
+            <p>{item.text}</p>          
           </div>
-          
         </Col>
       ))}
     </Row>
   </Container>
 )
 
-FeatureGrid.propTypes = {
+GalleryFeatureGrid.propTypes = {
   gridItems: PropTypes.arrayOf(
     PropTypes.shape({
       image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -42,4 +35,4 @@ FeatureGrid.propTypes = {
   ),
 }
 
-export default FeatureGrid
+export default GalleryFeatureGrid
