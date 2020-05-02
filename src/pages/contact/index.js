@@ -12,11 +12,11 @@ import subImage4 from "../../img/contactPage5.jpeg"
 import subImage5 from "../../img/contactPage6.jpeg"
 import subImage6 from "../../img/contactPage7.jpeg"
 
-function encode(data) {
+/*function encode(data) {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&')
-}
+}*/
 
 export default class Index extends React.Component {
   constructor(props) {
@@ -31,7 +31,7 @@ export default class Index extends React.Component {
   handleSubmit = e => {
     e.preventDefault()
     const form = e.target
-    fetch('https://stilltestingsite.netlify.app/contact/?no-cache=1', {
+    fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
